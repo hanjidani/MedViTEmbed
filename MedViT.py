@@ -502,17 +502,17 @@ class MedViT(nn.Module):
 
 @register_model
 def MedViT_small(pretrained=False, pretrained_cfg=None, **kwargs):
-    model, embl = MedViT(stem_chs=[64, 32, 64], depths=[3, 4, 10, 3], path_dropout=0.1, **kwargs)
-    return model, embl
+    model = MedViT(stem_chs=[64, 32, 64], depths=[3, 4, 10, 3], path_dropout=0.1, **kwargs)
+    return model
 
 
 @register_model
 def MedViT_base(pretrained=False, pretrained_cfg=None, **kwargs):
-    model, embl = MedViT(stem_chs=[64, 32, 64], depths=[3, 4, 20, 3], path_dropout=0.2, **kwargs)
-    return model ,embl
+    model = MedViT(stem_chs=[64, 32, 64], depths=[3, 4, 20, 3], path_dropout=0.2, **kwargs)
+    return model
 
 
 @register_model
 def MedViT_large(pretrained=False, pretrained_cfg=None, **kwargs):
-    model, embl = MedViT(stem_chs=[64, 32, 64], depths=[3, 4, 30, 3], path_dropout=0.2, **kwargs)
-    return model, embl
+    model = MedViT(stem_chs=[64, 32, 64], depths=[3, 4, 30, 3], path_dropout=0.2, **kwargs)
+    return model
